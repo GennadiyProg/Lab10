@@ -1,20 +1,50 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { pressing: false };
+  }
+  _onPressIn = () => {
+    this.setState({ pressing: true });
+  };
+  _onPressOut = () => {
+    this.setState({ pressing: false });
+  };
+  render() {
+    return (
+      <View style={styles.container}>
+        <TouchableHighlight
+          onPressIn={this._onPressIn}
+          onPressOut={this._onPressOut}
+          style={styles.touchable}
+        >
+          <View style={styles.button}>
+            <Text style={styles.welcome}>
+              {this.state.pressing ? "НАЖАТО!" : "НАЖМИ!"}
+            </Text>
+          </View>
+        </TouchableHighlight>
+      </View>
+    );
+  }
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   },
+  welcome: { fontSize: 20, textAlign: "center", margin: 10, color: "#FFFFFF" },
+  touchable: { borderRadius: 100 },
+  button: {
+    backgroundColor: "#FF00FF",
+    borderRadius: 100,
+    height: 200,
+    width: 200,
+    justifyContent: "center"
+  }
 });
