@@ -26,21 +26,21 @@ const ListExample = () => {
     },
     {
       key: '3',
-      name: 'Повесть о настоящем человеке',
-      description: 'Написал Полевой',
-      photo: require('../assets/povest.jpg'),
+      name: 'Идиот',
+      description: 'Написал Достоевский',
+      photo: require('../assets/idiot.jpg'),
     },
     {
       key: '4',
-      name: 'Преступление и наказание',
-      description: 'Написал Достоевский',
-      photo: require('../assets/nakaz.jpg'),
+      name: 'Назад в будущее',
+      description: 'Написал Марк Твен',
+      photo: require('../assets/nazad.jpg'),
     },
     {
       key: '5',
-      name: '1984',
-      description: 'Написал Оруэлл',
-      photo: require('../assets/dev.jpg'),
+      name: 'Мертвые души',
+      description: 'Написал Гоголь',
+      photo: require('../assets/mertvue_dushi.jpg'),
     },
   ]);
 

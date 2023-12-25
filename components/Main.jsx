@@ -6,13 +6,13 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <Link to={'/Button'} style={styles.link}>
-        Button
+        Кнопка
       </Link>
       <Link to={'/HelloWorld'} style={styles.link}>
         Hello World
       </Link>
       <Link to={'/ListExample'} style={styles.link}>
-        List Example
+        Список книг
       </Link>
     </View>
   );

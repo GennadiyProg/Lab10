@@ -17,12 +17,12 @@ const ButtonExample = () => {
         <View style={styles.button}>
           {pressing ? (
             <Image
-              source={require('../assets/povest.jpg')}
+              source={require('../assets/idiot.jpg')}
               style={styles.button}
             />
           ) : (
             <Text style={styles.welcome}>
-              {pressing ? 'Лягушка в обмороке!' : 'Влюблённая жаба!'}
+              {pressing ? 'Ты думал здесь что-то будет?' : 'Нажми меня!'}
             </Text>
           )}
         </View>
@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
   },
   welcome: {fontSize: 20, textAlign: 'center', margin: 10, color: '#FFFFFF'},
   button: {
-    backgroundColor: '#3caa3c',
-    borderRadius: 50,
+    backgroundColor: '#cc9631',
+    borderRadius: 30,
     height: 300,
     width: 200,
     justifyContent: 'center',
